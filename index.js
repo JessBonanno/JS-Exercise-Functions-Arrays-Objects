@@ -146,7 +146,8 @@ function getName(someObject) {
  */
 function appleIndex(/* code here */arr) {
   /* code here */
-  
+  return arr.indexOf('apple');
+
 }
 
 /**
@@ -164,8 +165,18 @@ function appleIndex(/* code here */arr) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
  */
-function isItAnApple(/* code here */) {
+function isItAnApple(/* code here */arr) {
   /* code here */
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 'apple') {
+      newArr.push(true);
+    } else {
+      newArr.push(false);
+    }
+    
+  }
+  return newArr;
 }
 
 /*
@@ -260,8 +271,15 @@ function getLastCarInfo(inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
  */
-function getModelYears(/* code here */) {
-  /* code here */
+function getModelYears(/* code here */inventory) {
+  /* code here */    
+      var yearArray = [];
+
+  for (let i = 0; i < inventory.length; i++) {
+
+    yearArray.push(inventory[i].car_year);
+  }
+  return yearArray;
 }
 
 /**
